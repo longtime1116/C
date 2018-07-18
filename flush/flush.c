@@ -1,6 +1,3 @@
-// fflushをしたあとで read しても読み込めないケースがある、という例
-// https://qiita.com/longtime1116/items/3f87c27af1195f6f8f82
-
 #include <stdio.h>
 
 int main(void)
@@ -10,7 +7,7 @@ int main(void)
     char buff2[10] = {0};
 
     FILE *in = fopen("./in.dat", "rb");
-    FILE *out = fopen("./out.dat", "wb");
+    FILE *out = fopen("./out.dat", "wb+");
 
 
     // setbuf(out, NULL);
